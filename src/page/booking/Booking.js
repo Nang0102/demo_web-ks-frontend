@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { FaBars } from "react-icons/fa";
 import { FaUser } from "react-icons/fa";
 import { FaEnvelope } from "react-icons/fa";
 import { FaPhoneAlt } from "react-icons/fa";
@@ -11,17 +10,15 @@ import Modal from "../../components/chucmung";
 
 function Booking() {
   const [firtname, setfirtname] = useState("");
-  const [gmail, setgmail] =useState("");
-  const [ngaydat, setngaydat] =useState("");
-  const [soluongnguoi, setsoluongnguoi] =useState("");
+  const [gmail, setgmail] = useState("");
+  const [ngaydat, setngaydat] = useState("");
+  const [soluongnguoi, setsoluongnguoi] = useState("");
   const [lastname, setlastname] = useState("");
-  const [sdt, setsdt] =useState("");
-  const [loaiphong, setloaiphong] =useState("");
-  const [ngaytra, setngaytra] =useState("");
-  const [isToggled, setisToggled] =useState(false);
-  const [isToggledd, setisToggledd] =useState(false);
-  
-  
+  const [sdt, setsdt] = useState("");
+  const [loaiphong, setloaiphong] = useState("");
+  const [ngaytra, setngaytra] = useState("");
+  const [isToggled, setisToggled] = useState(false);
+  const [isToggledd, setisToggledd] = useState(false);
 
   // const [showClass, setShowClass] = useState(false);
   // const addShowClass = () => {
@@ -31,7 +28,7 @@ function Booking() {
     e.preventDefault();
     setisToggled(true);
     setisToggledd(true);
-    const data={
+    const data = {
       firtname,
       lastname,
       gmail,
@@ -39,10 +36,10 @@ function Booking() {
       ngaydat,
       ngaytra,
       soluongnguoi,
-      loaiphong
+      loaiphong,
     };
     // const url = "http://localhost:5001/The-Booking"
-    const url = "https://dohuykhanh.herokuapp.com/The-Booking"
+    const url = "https://dohuykhanh.herokuapp.com/The-Booking";
     // console.log("giatri", e.target.value);
     // console.log("tendau", firtname);
     // console.log("tencuoi", lastname);
@@ -53,23 +50,21 @@ function Booking() {
     // console.log("tendau", soluongnguoi);
     // console.log("loaiphong", loaiphong);
     const response = await fetch(url, {
-      method: 'POST', // *GET, POST, PUT, DELETE, etc.
-      cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
-      credentials: 'same-origin', // include, *same-origin, omit
+      method: "POST", // *GET, POST, PUT, DELETE, etc.
+      cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
+      credentials: "same-origin", // include, *same-origin, omit
       headers: {
-        'Content-Type': 'application/json'
+        "Content-Type": "application/json",
         // 'Content-Type': 'application/x-www-form-urlencoded',
       },
-      redirect: 'follow', // manual, *follow, error
-      referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
-      body: JSON.stringify(data) // body data type must match "Content-Type" header
+      redirect: "follow", // manual, *follow, error
+      referrerPolicy: "no-referrer", // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+      body: JSON.stringify(data), // body data type must match "Content-Type" header
     });
-    
+
     console.log("tendau", firtname);
     console.log("tencuoi", lastname);
     console.log("danhap", response.json());
-    
-    
   };
   const onchangefirtname = (event) => {
     setfirtname(event.target.value);
@@ -77,27 +72,27 @@ function Booking() {
   const onchangelastname = (event) => {
     setlastname(event.target.value);
   };
-  const onchangegmail=(event)=>{
+  const onchangegmail = (event) => {
     setgmail(event.target.value);
-}
+  };
 
-  const onchangephonenumber= (event) => {
-      setsdt(event.target.value);
-  }
+  const onchangephonenumber = (event) => {
+    setsdt(event.target.value);
+  };
 
-    const onchangengayroidi= (event) => {
-      setngaytra(event.target.value);
-    }
+  const onchangengayroidi = (event) => {
+    setngaytra(event.target.value);
+  };
 
-    const onchangengaydatphong= (event) => {
-      setngaydat(event.target.value);
-    }
-    const onchangesoluongnguoi= (event) => {
-      setsoluongnguoi(event.target.value);
-    }
-    const onchangeloaiphong= (event) => {
-      setloaiphong(event.target.value);
-    }
+  const onchangengaydatphong = (event) => {
+    setngaydat(event.target.value);
+  };
+  const onchangesoluongnguoi = (event) => {
+    setsoluongnguoi(event.target.value);
+  };
+  const onchangeloaiphong = (event) => {
+    setloaiphong(event.target.value);
+  };
   return (
     <div className="booking-container">
       {" "}
@@ -137,7 +132,7 @@ function Booking() {
       <p className="booking-container-h1"> Resort Booking Form </p>{" "}
       <div className="booking-item">
         <div className="title"> Book Now </div>{" "}
-        <div className="content">
+        <div className="booking-content">
           <form action="#">
             <div className="user-details">
               <div className="input-box">
@@ -160,7 +155,12 @@ function Booking() {
               </div>{" "}
               <div className="input-box">
                 <FaEnvelope className="icon" />
-                <input type="email" id="input-group" placeholder="Email"  onChange={onchangegmail}/>
+                <input
+                  type="email"
+                  id="input-group"
+                  placeholder="Email"
+                  onChange={onchangegmail}
+                />
               </div>{" "}
               <div className="input-box">
                 <FaPhoneAlt className="icon" />
@@ -207,9 +207,7 @@ function Booking() {
                   <option value="Non - AC"> Non - AC </option>
                   <option value="Single Bed"> Single Bed </option>
                   <option value="Double Bed"> Double Bed </option>
-                  
                 </select>
-                
               </div>{" "}
             </div>{" "}
             <div className="button-booking">
@@ -218,13 +216,13 @@ function Booking() {
                 Book Now{" "}
               </button>{" "}
               {isToggledd && <button className="reset-btn"> Xem Bills </button>}
-              {isToggled && <Modal  closemodal={setisToggled}/>}
+              {isToggled && <Modal closemodal={setisToggled} />}
             </div>{" "}
           </form>{" "}
         </div>{" "}
       </div>{" "}
     </div>
   );
-} 
+}
 
 export default Booking;

@@ -28,6 +28,7 @@ input {
     width: 260px;
     border: 1px solid #e4a853;
     background-color: #e4a853;
+    border-radius: 12px;
     font-size: 13px;
     color: white;
     -webkit-transition-duration: 0.5s;

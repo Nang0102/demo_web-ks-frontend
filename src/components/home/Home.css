@@ -1,6 +1,5 @@
 .content {
     position: absolute;
-    top: 90%;
     margin-top: -150px;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -14,6 +13,7 @@
 
 .buttonn {
     align-items: flex-start;
+    top: 90%;
     background-color: #e4a853;
     border-color: #e4a853;
     border-style: solid;

@@ -125,10 +125,10 @@ a:active {
 
 .booking-container-h1 {
     font-family: "Flamenco", cursive;
-    font-size: 54px;
+    font-size: 35px;
     font-weight: 100;
     text-transform: capitalize;
-    color: rgb(136, 23, 23);
+    color: white;
     word-spacing: 11px;
     letter-spacing: 5px;
     margin: 50px 0 1.5em;
@@ -141,8 +141,8 @@ a:active {
     padding: 25px 30px;
     border-radius: 5px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
-    margin: 10%;
-    height: 50%;
+    margin: 5%;
+    height: 60%;
 }
 
 .booking-item .title {
@@ -154,15 +154,11 @@ a:active {
     letter-spacing: 7px;
 }
 
-.content {
-    margin: 4%;
-}
-
-.content form .user-details {
+.booking-content form .user-details {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin: 200px 0 12px 0;
+    margin: 4% 0 12px 0;
 }
 
 form .user-details .input-box {

@@ -26,8 +26,8 @@ input {
 .btn {
     height: 45px;
     width: 260px;
-    border: 1px solid #66a55f;
-    background-color: #66a55f;
+    border: 1px solid #e4a853;
+    background-color: #e4a853;
     font-size: 13px;
     color: white;
     -webkit-transition-duration: 0.5s;
@@ -36,7 +36,7 @@ input {
 
 .btn:hover {
     background-color: white;
-    color: #66a55f;
+    color: #e4a853;
 }
 
 #content {
@@ -55,7 +55,4 @@ input {
         margin-top: 10px;
         margin-left: 10%;
     }
-    /* #content {
-        width: 100%;
-    } */
 }

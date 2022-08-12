@@ -11,21 +11,15 @@ input[type="date"]:before {
 }
 
 input[type="date"]:focus:before {
-    content: '' !important;
+    content: "" !important;
 }
 
 .booking-container {
-    /* font-family: 'Roboto', sans-serif; */
     font-size: 100%;
     background: url("https://aeros.vn/upload/images/aeros-phong-suite-la-gi-2.webp") no-repeat center top;
-    /* background-attachment: fixed; */
     background-size: cover;
-    /* background-position: center; */
     height: 1000px;
 }
-
-
-/* ==============================  HEADER ============================*/
 
 header nav {
     padding: 0;
@@ -129,9 +123,6 @@ a:active {
     }
 }
 
-*/
-/* =============================== FORM =============================== */
-
 .booking-container-h1 {
     font-family: "Flamenco", cursive;
     font-size: 54px;
@@ -145,7 +136,6 @@ a:active {
 }
 
 .booking-item {
-    /* max-width: 700px; */
     width: 80%;
     background: rgba(0, 0, 0, 0.51);
     padding: 25px 30px;
@@ -161,9 +151,7 @@ a:active {
     color: rgb(13, 12, 12);
     text-transform: capitalize;
     margin-bottom: 1em;
-    /* font-weight: 500; */
     letter-spacing: 7px;
-    /* height: 100px; */
 }
 
 .content {
@@ -224,9 +212,6 @@ option {
     background-color: #000;
 }
 
-
-/* ============================ BUTTON ============================ */
-
 .button-booking {
     display: flex;
     justify-content: space-between;
@@ -247,24 +232,3 @@ option {
     font-size: 25px;
     cursor: pointer;
 }
-
-
-/* @media (max-width: 584px) {
-    .container {
-        max-width: 100%;
-    }
-    form .user-details .input-box {
-        margin-bottom: 15px;
-        width: 100%;
-    }
-    .content form .user-details {
-        max-height: 300px;
-        overflow-y: scroll;
-    }
-    .user-details::-webkit-scrollbar {
-        width: 5px;
-    }
-    .booking-container h1 {
-        font-size: 36px;
-    }
-} */

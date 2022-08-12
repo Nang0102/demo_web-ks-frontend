@@ -10,7 +10,6 @@
     height: 100%;
     background-image: url("https://www.its.de/pibe-media/itsy/hotel/GN0502_S21_4.jpg");
     background-position: center;
-    /* Center the image */
     background-repeat: no-repeat;
     background-size: cover;
     overflow: hidden;
@@ -48,13 +47,6 @@
     width: 100%;
     z-index: 1;
     height: 100vh;
-    /* background: rgba(0, 0, 0, 0.4);
-  background-image: linear-gradient(
-    to top,
-    rgba(0, 0, 0, 0.8) 0,
-    rgba(0, 0, 0, 0) 60%,
-    rgba(0, 0, 0, 0.8) 100%
-  ); */
 }
 
 .loginScreen__logo {

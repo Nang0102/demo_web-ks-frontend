@@ -1,5 +1,5 @@
 import "./Style.css";
-import React, { useContext } from "react";
+import React from "react";
 
 export const Title = (props) => {
   return (

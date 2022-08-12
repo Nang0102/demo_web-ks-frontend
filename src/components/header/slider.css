@@ -12,10 +12,6 @@
     display: inline-block;
 }
 
-.active {
-    display: inline-block;
-}
-
 .inactive {
     display: none;
 }

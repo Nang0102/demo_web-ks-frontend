@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./header.css";
 import { NavLink, Routes, Route } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -11,6 +11,8 @@ import Room from "./../rooms/Rooms";
 import Booking from "./../../page/booking/Booking";
 import { Contact } from "./../Contact/Contact";
 import Detail from "./../rooms/Detail/Detail";
+import Logout from "./../auth/logout/Logout";
+import { LoginContext } from "../../context/AuthContext";
 
 function Header() {
   // const activeClass = (params) => {
@@ -26,6 +28,7 @@ function Header() {
   //   }
   // };
   // window.addEventListener("scroll", changeBackground);
+  const { login } = useContext(LoginContext);
   return (
     <div>
       <div className=" header-container">
@@ -37,7 +40,7 @@ function Header() {
 
         <NavLinks />
         <NavLink className=" button  " to="/auth">
-          Login <FontAwesomeIcon icon={faArrowRight} />
+          {login ? <Logout /> : "Login"} <FontAwesomeIcon icon={faArrowRight} />
         </NavLink>
       </div>
       <Routes>

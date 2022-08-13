@@ -1,6 +1,5 @@
-import React, { useContext } from "react";
-import { LoginContext } from "../../context/AuthContext";
-import Logout from "../auth/logout/Logout";
+import React from "react";
+
 import { Outlet } from "react-router-dom";
 // import Room from "../rooms/Rooms";
 
@@ -14,11 +13,11 @@ import Slide from "../header/Slide";
 import RoomsSuites from "./RoomsSuites";
 // import Header from "../header/Header";
 function Home() {
-  const { login } = useContext(LoginContext);
+  // const { login } = useContext(LoginContext);
 
   return (
     <div className="home">
-      {login ? <Logout /> : null}
+      {/* {login ? <Logout /> : null} */}
       <Slide />
       <div className="content">
         <NavLink
